@@ -1,7 +1,10 @@
+import { useEffect, useState } from "react"
 import React from 'react'
+import { listaDiscos } from "../Servicios/DiscoServicio";
+
 
 const ComponenteDisco = () => {
-    const dummyData =[
+    /*const dummyData =[
         {
             "id": 1,
             "artista": "artista1",
@@ -44,8 +47,17 @@ const ComponenteDisco = () => {
             "duracion": 30,
             "cod": "awd153"
         }
-    ]
+    ]*/
 
+    const [disco, setDisco] = useState([]);
+
+    useEffect(() => {
+        listaDiscos().then ((respuesta) => {
+            setDisco(respuesta.data);
+        }).catch(error => {
+            console.error(error);
+        })
+    },[])
 
   return (
     <div>
@@ -61,7 +73,7 @@ const ComponenteDisco = () => {
             </thead>
             <tbody>
                 {
-                    dummyData.map(disco => 
+                    disco.map(disco => 
                         <tr key={disco.id}>
                             <td>{disco.id}</td>
                             <td>{disco.artista}</td>
