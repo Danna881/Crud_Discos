@@ -49,7 +49,7 @@ const ComponenteDisco = () => {
 
   return (
     <div>
-        <table>
+        <table className="table-auto">
             <thead>
                 <tr>
                     <th>Id</th>
