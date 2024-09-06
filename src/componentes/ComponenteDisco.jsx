@@ -49,7 +49,7 @@ const ComponenteDisco = () => {
 
   return (
     <div>
-        <table className="table-auto">
+        <table className="table-fixed border-collapse border">
             <thead>
                 <tr>
                     <th>Id</th>

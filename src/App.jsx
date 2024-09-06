@@ -1,4 +1,4 @@
-import ComponenteDisco from "./assets/componentes/ComponenteDisco"
+import ComponenteDisco from "./componentes/ComponenteDisco"
 
 
 function App() {
